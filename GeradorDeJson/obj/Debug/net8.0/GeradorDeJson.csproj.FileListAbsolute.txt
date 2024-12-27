@@ -1,0 +1,14 @@
+C:\Users\User\source\repos\GeradorDeJson\GeradorDeJson\bin\Debug\net8.0\GeradorDeJson.exe
+C:\Users\User\source\repos\GeradorDeJson\GeradorDeJson\bin\Debug\net8.0\GeradorDeJson.deps.json
+C:\Users\User\source\repos\GeradorDeJson\GeradorDeJson\bin\Debug\net8.0\GeradorDeJson.runtimeconfig.json
+C:\Users\User\source\repos\GeradorDeJson\GeradorDeJson\bin\Debug\net8.0\GeradorDeJson.dll
+C:\Users\User\source\repos\GeradorDeJson\GeradorDeJson\bin\Debug\net8.0\GeradorDeJson.pdb
+C:\Users\User\source\repos\GeradorDeJson\GeradorDeJson\obj\Debug\net8.0\GeradorDeJson.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\GeradorDeJson\GeradorDeJson\obj\Debug\net8.0\GeradorDeJson.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\GeradorDeJson\GeradorDeJson\obj\Debug\net8.0\GeradorDeJson.AssemblyInfo.cs
+C:\Users\User\source\repos\GeradorDeJson\GeradorDeJson\obj\Debug\net8.0\GeradorDeJson.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\GeradorDeJson\GeradorDeJson\obj\Debug\net8.0\GeradorDeJson.dll
+C:\Users\User\source\repos\GeradorDeJson\GeradorDeJson\obj\Debug\net8.0\refint\GeradorDeJson.dll
+C:\Users\User\source\repos\GeradorDeJson\GeradorDeJson\obj\Debug\net8.0\GeradorDeJson.pdb
+C:\Users\User\source\repos\GeradorDeJson\GeradorDeJson\obj\Debug\net8.0\GeradorDeJson.genruntimeconfig.cache
+C:\Users\User\source\repos\GeradorDeJson\GeradorDeJson\obj\Debug\net8.0\ref\GeradorDeJson.dll
