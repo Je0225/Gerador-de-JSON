@@ -21,5 +21,35 @@ namespace GeradorDeJson {
       Value = value;
       Tipo = tipo;
     }
+
+    public String EscreveAtributo() {
+      if (Nome == null || Tipo != Tipo.Atributo) {
+        return "";
+      }
+      Object? valor = Value;
+      switch (valor?.GetType().Name) {
+        case null:
+          valor = "null";
+          break;
+        case "DateTime":
+          DateTime dateTime = (DateTime)valor;
+          valor = dateTime.ToString("yyyyMMdd");
+          break;
+        case "DateOnly":
+          DateOnly date = (DateOnly)valor;
+          valor = date.ToString("yyyyMMdd");
+          break;
+        case "String":
+          valor = $"\"{valor}\"";
+          break;
+        case "Double":
+          valor = valor.ToString()?.Replace(",", ".");
+          break;
+        case "Boolean":
+          valor = valor.ToString()?.ToLower();
+          break;
+      }
+      return  $"\"{Nome}\":{valor}";
+    }
   }
 }

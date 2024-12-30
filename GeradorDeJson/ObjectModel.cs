@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Schema;
@@ -46,17 +47,44 @@ namespace GeradorDeJson {
       return obj;
     }
 
-    public String GeraTexto(String retorno){
-      Json json = new Json();
+    /*public String GeraTexto(String retorno){ 
       foreach (PropertyModel atributo in Atributos) {
-        json.AddAtributo(atributo.Nome, atributo.Value);
+        retorno += atributo.EscreveAtributo();
       }
-      retorno = json.AsString();
       foreach (ObjectModel obj in Objetos) {
-        retorno += $"\"{obj.Nome}\": ";
+        retorno += EscreveObjeto();
         retorno += obj.GeraTexto(retorno);
       }
       return retorno;
+    }*/
+
+    public String EscreveObjeto() {
+      if (Tipo != Tipo.Objeto) {
+        return "";
+      }
+      String textoJson = $"\"{Nome}\": {{";
+      List<PropertyModel> atributos = RetornaAtributos();
+      List<ObjectModel> objetos = RetornaObjetos();
+
+      foreach (PropertyModel atributo in atributos) {
+        textoJson += atributo.EscreveAtributo();
+        if (atributos.Last() != atributo) {
+         textoJson += InsereVirgula(true, false);
+        }
+      }
+      if (objetos.Count > 0) {
+        textoJson += InsereVirgula(true, false);
+      }
+      foreach (ObjectModel objeto in objetos) {
+        textoJson += objeto.EscreveObjeto();
+        if (objetos.Last() != objeto) {
+          textoJson += InsereVirgula(true, false);
+        }
+      }
+      textoJson += "}";
+      return textoJson;
     }
+
   }
+
 }

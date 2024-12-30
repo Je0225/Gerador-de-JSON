@@ -17,5 +17,24 @@ namespace GeradorDeJson {
       Tipo = tipo;
     }
 
-  }
+    protected Model() {
+
+    }
+
+    protected String InsereVirgula(Boolean inserirEspaco, Boolean quebrarLinha) {
+      if (inserirEspaco) {
+        return ", ";
+      }
+      if (!inserirEspaco) {
+        return ",";
+      }
+      if (quebrarLinha) {
+        return "\n";
+      }
+      if (!quebrarLinha) {
+        return "";
+      }
+      return "";
+    }
+}
 }
