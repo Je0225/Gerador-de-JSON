@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Schema;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using Object = System.Object;
+using String = System.String;
 
 namespace GeradorDeJson {
 
@@ -31,7 +34,7 @@ namespace GeradorDeJson {
       Atributos.Add(new PropertyModel(nome, value, Tipo.Atributo));
     }
 
-    public ObjectModel AdicionaObjeto(String? nome, Object? value) {
+    public ObjectModel AdicionaObjeto(String? nome) {
       ObjectModel obj = new ObjectModel(nome, Tipo.Objeto);
       Objetos.Add(obj);
       return obj;
@@ -43,18 +46,17 @@ namespace GeradorDeJson {
       return obj;
     }
 
-    public String GeraTexto(){
+    public String GeraTexto(String retorno){
       Json json = new Json();
       foreach (PropertyModel atributo in Atributos) {
         json.AddAtributo(atributo.Nome, atributo.Value);
       }
+      retorno = json.AsString();
       foreach (ObjectModel obj in Objetos) {
-        json.AddObject(obj.Nome);
-        obj.GeraTexto();
+        retorno += $"\"{obj.Nome}\": ";
+        retorno += obj.GeraTexto(retorno);
       }
-      return json.ToString();
+      return retorno;
     }
-
-    
   }
 }

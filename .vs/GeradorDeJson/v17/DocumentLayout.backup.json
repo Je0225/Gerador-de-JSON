@@ -1,30 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\GeradorDeJson\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorDeJson\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|c:\\users\\user\\source\\repos\\geradordejson\\geradordejson\\tipos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|solutionrelative:geradordejson\\tipos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|c:\\users\\user\\source\\repos\\geradordejson\\geradordejson\\json.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|c:\\users\\user\\documents\\sources\\csharp\\geradordejson\\geradordejson\\json.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|solutionrelative:geradordejson\\json.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|c:\\users\\user\\source\\repos\\geradordejson\\geradordejson\\objectmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|solutionrelative:geradordejson\\objectmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|c:\\users\\user\\source\\repos\\geradordejson\\geradordejson\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|c:\\users\\user\\documents\\sources\\csharp\\geradordejson\\geradordejson\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|solutionrelative:geradordejson\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|c:\\users\\user\\source\\repos\\geradordejson\\geradordejson\\propertymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|solutionrelative:geradordejson\\propertymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|c:\\users\\user\\documents\\sources\\csharp\\geradordejson\\geradordejson\\objectmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|solutionrelative:geradordejson\\objectmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|c:\\users\\user\\source\\repos\\geradordejson\\geradordejson\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|solutionrelative:geradordejson\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|c:\\users\\user\\documents\\sources\\csharp\\geradordejson\\geradordejson\\tipos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|solutionrelative:geradordejson\\tipos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|c:\\users\\user\\documents\\sources\\csharp\\geradordejson\\geradordejson\\propertymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|solutionrelative:geradordejson\\propertymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,11 +36,11 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "ObjectModel.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeradorDeJson\\GeradorDeJson\\ObjectModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorDeJson\\GeradorDeJson\\ObjectModel.cs",
               "RelativeDocumentMoniker": "GeradorDeJson\\ObjectModel.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\GeradorDeJson\\GeradorDeJson\\ObjectModel.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorDeJson\\GeradorDeJson\\ObjectModel.cs",
               "RelativeToolTip": "GeradorDeJson\\ObjectModel.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAcwDYAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAwDcAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-27T13:45:21.339Z",
               "IsPinned": true,
@@ -54,11 +50,11 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "PropertyModel.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeradorDeJson\\GeradorDeJson\\PropertyModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorDeJson\\GeradorDeJson\\PropertyModel.cs",
               "RelativeDocumentMoniker": "GeradorDeJson\\PropertyModel.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\GeradorDeJson\\GeradorDeJson\\PropertyModel.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorDeJson\\GeradorDeJson\\PropertyModel.cs",
               "RelativeToolTip": "GeradorDeJson\\PropertyModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-27T18:05:45.141Z",
               "IsPinned": true,
@@ -74,52 +70,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Model.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeradorDeJson\\GeradorDeJson\\Model.cs",
-              "RelativeDocumentMoniker": "GeradorDeJson\\Model.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\GeradorDeJson\\GeradorDeJson\\Model.cs",
-              "RelativeToolTip": "GeradorDeJson\\Model.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAmwBIAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T19:13:09.161Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Tipos.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeradorDeJson\\GeradorDeJson\\Tipos.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorDeJson\\GeradorDeJson\\Tipos.cs",
               "RelativeDocumentMoniker": "GeradorDeJson\\Tipos.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\GeradorDeJson\\GeradorDeJson\\Tipos.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorDeJson\\GeradorDeJson\\Tipos.cs",
               "RelativeToolTip": "GeradorDeJson\\Tipos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-27T13:40:23.215Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Json.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeradorDeJson\\GeradorDeJson\\Json.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorDeJson\\GeradorDeJson\\Json.cs",
               "RelativeDocumentMoniker": "GeradorDeJson\\Json.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\GeradorDeJson\\GeradorDeJson\\Json.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorDeJson\\GeradorDeJson\\Json.cs",
               "RelativeToolTip": "GeradorDeJson\\Json.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAvwCsAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAgwCUAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-27T13:27:32.608Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\GeradorDeJson\\GeradorDeJson\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorDeJson\\GeradorDeJson\\Program.cs",
               "RelativeDocumentMoniker": "GeradorDeJson\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\GeradorDeJson\\GeradorDeJson\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorDeJson\\GeradorDeJson\\Program.cs",
               "RelativeToolTip": "GeradorDeJson\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-26T20:22:42.637Z",
               "EditorCaption": ""

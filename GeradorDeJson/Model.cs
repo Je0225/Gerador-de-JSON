@@ -12,8 +12,7 @@ namespace GeradorDeJson {
 
     public Tipo Tipo { get; }
 
-
-    public Model(String? nome, Tipo tipo) {
+    protected Model(String? nome, Tipo tipo) {
       Nome = nome;
       Tipo = tipo;
     }

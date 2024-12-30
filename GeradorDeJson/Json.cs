@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿
 using Boolean = System.Boolean;
 using Object = System.Object;
 using String = System.String;
@@ -39,16 +33,16 @@ namespace GeradorDeJson {
       TextoJson += quebrarLinha? "\n" : "";
     }
 
-    public override String ToString() {
+    public String AsString() {
       AbreJson();
-      foreach (Model obj in Objetos) {
-        if (obj.Tipo == Tipo.Atributo) {
-          EscreveAtributo((PropertyModel)obj);
+      foreach (Model objeto in Objetos) {
+        if (objeto.Tipo == Tipo.Atributo) {
+          EscreveAtributo((PropertyModel)objeto);
         }
-        if (obj.Tipo == Tipo.Objeto) {
-          EscreveObjeto((ObjectModel)obj);
+        if (objeto.Tipo == Tipo.Objeto) {
+          EscreveObjeto((ObjectModel)objeto);
         }
-        if (Objetos.Last() != obj) {
+        if (Objetos.Last() != objeto) {
           InsereVirgula(false, true);
         }
       }
@@ -74,9 +68,9 @@ namespace GeradorDeJson {
         InsereVirgula(true, false);
       }
       foreach (ObjectModel objeto in objetos) {
-        TextoJson += $"\"{objeto.Nome}\": ";
-        TextoJson += objeto.GeraTexto();
+        TextoJson += objeto.GeraTexto("");
       }
+      FechaJson();
     }
 
     private void EscreveAtributo(PropertyModel model) {
@@ -85,16 +79,27 @@ namespace GeradorDeJson {
         return;
       }
       Object? valor = model.Value;
-      if (valor == null) {
-        valor = "null";
-      } else {
-        valor = valor?.GetType().Name switch {
-          "String" => $"\"{valor}\"",
-          "Double" => valor.ToString()?.Replace(",", "."),
-          "DateTime" => valor.ToString()?.Replace("/", "-").Remove(10).Insert(0, "\"").Insert(11, "\""),
-          "Boolean" => valor.ToString()?.ToLower(),
-          _ => valor
-        };
+      switch (valor?.GetType().Name) {
+        case null:
+          valor = "null";
+          break;
+        case "DateTime":
+          DateTime dateTime = (DateTime)valor;
+          valor = dateTime.ToString("yyyyMMdd");
+          break;
+        case "DateOnly":
+          DateOnly date = (DateOnly)valor;
+          valor = date.ToString("yyyyMMdd");
+          break;
+        case "String":
+          valor = $"\"{valor}\"";
+          break;
+        case "Double":
+          valor = valor.ToString()?.Replace(",", ".");
+          break;
+        case "Boolean":
+          valor = valor.ToString()?.ToLower();
+          break;
       }
       TextoJson += $"\"{nome}\":{valor}";
     }

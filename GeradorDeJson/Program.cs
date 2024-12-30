@@ -3,13 +3,27 @@
 using GeradorDeJson;
 
 Json Json = new Json();
-Json.AddAtributo("nome", "Jenifer");
-Json.AddAtributo("idade", 22);
-Json.AddAtributo("nascimento", new DateTime(2002, 2, 25));
 
-ObjectModel giovano = Json.AddObject("Pessoa");
-giovano.AdicionaAtributo("Nome", "Giovano");
-giovano.AdicionaAtributo("função", "programador");
-ObjectModel plantaDoGiovavo = giovano.AdicionaObjeto("planta", "suculenta");
-plantaDoGiovavo.AdicionaAtributo("corDoVaso", "branco");
-Console.WriteLine(Json.ToString());
+ObjectModel periodoApuracao = Json.AddObject("PeriodoApuracao");
+periodoApuracao.AdicionaAtributo("MesApuracao", 11);
+periodoApuracao.AdicionaAtributo("AnoApuracao", 2024);
+
+ObjectModel dadosIniciais = Json.AddObject("DadosIniciais");
+dadosIniciais.AdicionaAtributo("SemMovimento", false);
+dadosIniciais.AdicionaAtributo("QualificacaoPj", 1);
+dadosIniciais.AdicionaAtributo("TributacaoLucro", 3);
+
+ObjectModel responsavelApuracao = dadosIniciais.AdicionaObjeto("ResponsavelApuracao");
+responsavelApuracao.AdicionaAtributo("CpfResponsavel", "111.111.111-28");
+
+ObjectModel telResponsavel = responsavelApuracao.AdicionaObjeto("TelResponsavel");
+telResponsavel.AdicionaAtributo("Ddd", 45);
+telResponsavel.AdicionaAtributo("NumTelefone", "99999-1111");
+
+responsavelApuracao.AdicionaAtributo("EmailResponsavel", "email@empresa.com.br");
+responsavelApuracao.AdicionaObjeto("RegistroCrc").AdicionaAtributo("UfRegistro", "PR");
+
+ObjectModel debitos = Json.AddObject("Debitos");
+debitos.AdicionaAtributo("BalancoLucroReal", false);
+
+Console.WriteLine(Json.AsString());
