@@ -4,26 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using Boolean = System.Boolean;
 using Object = System.Object;
 using String = System.String;
 
 namespace GeradorDeJson {
-  public  class PropertyModel : Model {
+  public class PropertyModel(String? nome, Object? value, Tipo tipo): Model(nome, tipo) {
 
-    public new String? Nome { get; }
+    private String? Nome { get; } = nome;
 
-    public Object? Value { get;}
+    private Object? Value { get;} = value;
 
-    public new Tipo Tipo { get; }
+    private new Tipo Tipo { get; set; }
 
-    public PropertyModel(String? nome, Object? value, Tipo tipo) : base(nome, tipo) {
-      Nome = nome;
-      Value = value;
-      Tipo = tipo;
-    }
-
-    public String EscreveAtributo() {
-      if (Nome == null || Tipo != Tipo.Atributo) {
+    public String EscreveAtributo(Boolean escreverNome = true) {
+      if (Tipo != Tipo.Atributo) {
         return "";
       }
       Object? valor = Value;
@@ -49,7 +44,10 @@ namespace GeradorDeJson {
           valor = valor.ToString()?.ToLower();
           break;
       }
-      return  $"\"{Nome}\":{valor}";
+      if (escreverNome) {
+        return $"\"{Nome}\":{valor}";
+      }
+      return valor.ToString();
     }
   }
 }

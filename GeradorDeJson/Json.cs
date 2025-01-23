@@ -17,7 +17,13 @@ namespace GeradorDeJson {
     }
 
     public void AddAtributo(String? nome, Object? value) {
-      Objetos.Add(new PropertyModel(nome, value, Tipo.Atributo));
+      Objetos.Add(new PropertyModel(nome, value, Tipo));
+    }
+
+    public ListModel AddLista(String? nome,  Tipo tipoElementos) {
+      ListModel list = new ListModel(nome, tipoElementos, Tipo.Lista);
+      Objetos.Add(list);
+      return list;
     }
 
     private void AbreJson() {
@@ -38,6 +44,10 @@ namespace GeradorDeJson {
         if (objeto.Tipo == Tipo.Objeto) {
           ObjectModel o = (ObjectModel)objeto;
           TextoJson += o.EscreveObjeto();
+        }
+        if (objeto.Tipo == Tipo.Lista) {
+          ListModel l = (ListModel)objeto;
+          TextoJson += l.EscreveLista();
         }
         if (Objetos.Last() != objeto) {
           TextoJson += InsereVirgula(false, true);

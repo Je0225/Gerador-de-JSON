@@ -31,9 +31,6 @@ namespace GeradorDeJson {
       if (quebrarLinha) {
         return "\n";
       }
-      if (!quebrarLinha) {
-        return "";
-      }
       return "";
     }
 }

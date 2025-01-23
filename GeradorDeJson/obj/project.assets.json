@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorDeJson\\GeradorDeJson\\GeradorDeJson.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorJson\\GeradorDeJson\\GeradorDeJson.csproj",
       "projectName": "GeradorDeJson",
-      "projectPath": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorDeJson\\GeradorDeJson\\GeradorDeJson.csproj",
+      "projectPath": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorJson\\GeradorDeJson\\GeradorDeJson.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorDeJson\\GeradorDeJson\\obj\\",
+      "outputPath": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorJson\\GeradorDeJson\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

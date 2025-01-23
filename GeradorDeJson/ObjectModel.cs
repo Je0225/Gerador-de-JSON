@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Schema;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using Boolean = System.Boolean;
 using Object = System.Object;
 using String = System.String;
 
@@ -17,20 +18,8 @@ namespace GeradorDeJson {
 
     private List<ObjectModel> Objetos { get; } = new();
 
-    private List<ObjectModel> Listas { get; } = new();
-
-    public List<PropertyModel> RetornaAtributos() {
-      return Atributos;
-    }
-
-    public List<ObjectModel> RetornaObjetos() {
-      return Objetos;
-    }
-
-    public List<ObjectModel> RetornaListas() {
-      return Listas;
-    }
-
+    private List<ListModel> Listas { get; } = new();
+   
     public void AdicionaAtributo(String nome, Object? value) {
       Atributos.Add(new PropertyModel(nome, value, Tipo.Atributo));
     }
@@ -41,46 +30,40 @@ namespace GeradorDeJson {
       return obj;
     }
 
-    public ObjectModel AdicionaLista(String? nome, Object? value) {
-      ObjectModel obj = new ObjectModel(nome, Tipo.Lista);
-      Listas.Add(obj);
-      return obj;
+    public ListModel AdicionaLista(String? nome, Tipo TipoElementos) {
+      ListModel list = new ListModel(nome, TipoElementos, Tipo.Lista);
+      Listas.Add(list);
+      return list;
     }
 
-    /*public String GeraTexto(String retorno){ 
+    public String EscreveObjeto(Boolean escreverNome = true) {
+      String textoJson = escreverNome ? $"\"{Nome}\": {{" : $"{{";
+     
       foreach (PropertyModel atributo in Atributos) {
-        retorno += atributo.EscreveAtributo();
-      }
-      foreach (ObjectModel obj in Objetos) {
-        retorno += EscreveObjeto();
-        retorno += obj.GeraTexto(retorno);
-      }
-      return retorno;
-    }*/
-
-    public String EscreveObjeto() {
-      if (Tipo != Tipo.Objeto) {
-        return "";
-      }
-      String textoJson = $"\"{Nome}\": {{";
-      List<PropertyModel> atributos = RetornaAtributos();
-      List<ObjectModel> objetos = RetornaObjetos();
-
-      foreach (PropertyModel atributo in atributos) {
         textoJson += atributo.EscreveAtributo();
-        if (atributos.Last() != atributo) {
+        if (Atributos.Last() != atributo) {
          textoJson += InsereVirgula(true, false);
         }
       }
-      if (objetos.Count > 0) {
+      if (Objetos.Count > 0) {
         textoJson += InsereVirgula(true, false);
       }
-      foreach (ObjectModel objeto in objetos) {
+      foreach (ObjectModel objeto in Objetos) {
         textoJson += objeto.EscreveObjeto();
-        if (objetos.Last() != objeto) {
+        if (Objetos.Last() != objeto) {
           textoJson += InsereVirgula(true, false);
         }
       }
+      if (Listas.Count > 0) {
+        textoJson += InsereVirgula(true, false);
+      }
+      foreach (ListModel lista in Listas) {
+        textoJson += lista.EscreveLista();
+        if (Listas.Last() != lista) {
+          textoJson += InsereVirgula(true, false);
+        }
+      }
+      
       textoJson += "}";
       return textoJson;
     }
