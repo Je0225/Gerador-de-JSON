@@ -10,50 +10,31 @@ namespace GeradorDeJson {
 
     private List<Model> Objetos { get; } = new();
 
-    public ObjectModel AddObject(String? nome) {
-      ObjectModel obj = new ObjectModel(nome, Tipo.Objeto);
+    public ObjectModel AddObject(String nome) {
+      ObjectModel obj = new ObjectModel(nome);
       Objetos.Add(obj);
       return obj;
     }
 
-    public void AddAtributo(String? nome, Object? value) {
-      Objetos.Add(new PropertyModel(nome, value, Tipo));
+    public void AddAtributo(String nome, Object? value) {
+      Objetos.Add(new PropertyModel(nome, value));
     }
 
-    public ListModel AddLista(String? nome,  Tipo tipoElementos) {
-      ListModel list = new ListModel(nome, tipoElementos, Tipo.Lista);
+    public ListModel AddLista(String nome) {
+      ListModel list = new ListModel(nome);
       Objetos.Add(list);
       return list;
     }
 
-    private void AbreJson() {
+    public override String AsString(Boolean escreverNome = true) {
       TextoJson = "{\n";
-    }
-
-    private void FechaJson() {
-      TextoJson += "\n}";
-    }
-
-    public String AsString() {
-      AbreJson();
       foreach (Model objeto in Objetos) {
-        if (objeto.Tipo == Tipo.Atributo) {
-          PropertyModel p = (PropertyModel)objeto;
-          TextoJson += p.EscreveAtributo();
-        }
-        if (objeto.Tipo == Tipo.Objeto) {
-          ObjectModel o = (ObjectModel)objeto;
-          TextoJson += o.EscreveObjeto();
-        }
-        if (objeto.Tipo == Tipo.Lista) {
-          ListModel l = (ListModel)objeto;
-          TextoJson += l.EscreveLista();
-        }
+        TextoJson += objeto.AsString();
         if (Objetos.Last() != objeto) {
-          TextoJson += InsereVirgula(false, true);
+          TextoJson += "\n";
         }
       }
-      FechaJson();
+      TextoJson += "\n}";
       return TextoJson;
     }
 

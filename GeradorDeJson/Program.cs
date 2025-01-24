@@ -4,7 +4,7 @@ using GeradorDeJson;
 
 Json Json = new Json();
 
-/*ObjectModel periodoApuracao = Json.AddObject("PeriodoApuracao");
+ObjectModel periodoApuracao = Json.AddObject("PeriodoApuracao");
 periodoApuracao.AdicionaAtributo("MesApuracao", 11);
 periodoApuracao.AdicionaAtributo("AnoApuracao", 2024);
 
@@ -26,30 +26,30 @@ responsavelApuracao.AdicionaObjeto("RegistroCrc").AdicionaAtributo("UfRegistro",
 ObjectModel debitos = Json.AddObject("Debitos");
 debitos.AdicionaAtributo("BalancoLucroReal", false);
 
-ListModel lista = Json.AddLista("Umalista", Tipo.Atributo);
-lista.Add(new PropertyModel(null, 5, Tipo.Atributo));
-lista.Add(new PropertyModel(null, 9, Tipo.Atributo));
+ListModel lista = Json.AddLista("Umalista");
+lista.Add(5);
+lista.Add(9);
 
-ListModel outraLista = Json.AddLista("Outralista", Tipo.Objeto);
+ListModel outraLista = Json.AddLista("Outralista");
 outraLista.Add(dadosIniciais);
-outraLista.Add(periodoApuracao);*/
+outraLista.Add(periodoApuracao);
 
-ObjectModel Giovano = Json.AddObject("pessoa");
-Giovano.AdicionaAtributo("nome", "giovano");
-Giovano.AdicionaAtributo("foda", true);
-Giovano.AdicionaAtributo("teste", null);
-ListModel numerosMegasena = Giovano.AdicionaLista("megasena", Tipo.Atributo);
-numerosMegasena.Add(new PropertyModel(null, 10, Tipo.Atributo));
-numerosMegasena.Add(new PropertyModel(null, 26, Tipo.Atributo));
-numerosMegasena.Add(new PropertyModel(null, 29, Tipo.Atributo));
-numerosMegasena.Add(new PropertyModel(null, 33, Tipo.Atributo));
-numerosMegasena.Add(new PropertyModel(null, 52, Tipo.Atributo));
-numerosMegasena.Add(new PropertyModel(null, 58, Tipo.Atributo));
-ListModel provas = Json.AddLista("provas", Tipo.Objeto);
-ObjectModel provaPt = new ObjectModel(null, Tipo.Objeto);
+ObjectModel giovano = Json.AddObject("pessoa");
+giovano.AdicionaAtributo("nome", "giovano");
+giovano.AdicionaAtributo("foda", true);
+giovano.AdicionaAtributo("teste", null);
+ListModel numerosMegasena = giovano.AdicionaLista("megasena");
+numerosMegasena.Add(10);
+numerosMegasena.Add(26);
+numerosMegasena.Add(29);
+numerosMegasena.Add(33);
+numerosMegasena.Add(52);
+numerosMegasena.Add(58);
+ListModel provas = Json.AddLista("provas");
+ObjectModel provaPt = new ObjectModel();
 provaPt.AdicionaAtributo("nome", "portugues");
 provaPt.AdicionaAtributo("nota", 9.5);
-ObjectModel provaMat = new ObjectModel(null, Tipo.Objeto);
+ObjectModel provaMat = new ObjectModel();
 provaMat.AdicionaAtributo("nome", "matematica");
 provaMat.AdicionaAtributo("nota", 9);
 provas.Add(provaPt);

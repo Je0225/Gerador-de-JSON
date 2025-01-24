@@ -6,44 +6,36 @@ using System.Threading.Tasks;
 
 namespace GeradorDeJson {
 
-  public class ListModel(String? nome, Tipo tipoElementos, Tipo tipo): Model(nome, tipo){
+  public class ListModel : Model {
 
     private List<Model> Lista { get; set; } = new();
 
-    private String Nome { get; set; } = nome;
+    public ListModel(String? nome) {
+      Nome = nome;
+    }
 
-    public  Tipo Tipo { get; set; }
-
-    private Tipo TipoElementos { get; set; } = tipoElementos;
+    public void Add(Object elemento) {
+      PropertyModel property = new PropertyModel(elemento);
+      Lista.Add(property);
+    }
 
     public void Add(Model elemento) {
-      //Model e = (Model)elemento;
-      if (TipoElementos != elemento.Tipo) {
-        Console.WriteLine("O elemento não será adicionado: o tipo do elemento informado não corresponde ao tipo da lista");
-      }
       Lista.Add(elemento);
     }
 
-    public String EscreveLista() {
-      String textoJson = $"\"{Nome}\": [";
-
+    public override String AsString(Boolean escreverNome = true) {
+      String textoJson = escreverNome ? $"\"{Nome}\": [" : $"[";
       foreach (Model elemento in Lista) {
-        if (elemento.Tipo == Tipo.Atributo) {
-          PropertyModel property = (PropertyModel)elemento;
-          textoJson += property.EscreveAtributo(false);
-        }
-        if (elemento.Tipo == Tipo.Objeto) {
-          ObjectModel objeto = (ObjectModel)elemento;
-          textoJson += objeto.EscreveObjeto(false);
-        }
+        textoJson += elemento.AsString(false);
         if (Lista.Last() != elemento) {
-          textoJson += InsereVirgula(true, false);
+          textoJson += ", ";
         }
       }
       textoJson += "]";
       return textoJson;
     }
 
+    // unir o ObjectModel e o ListModel
   }
 
 }

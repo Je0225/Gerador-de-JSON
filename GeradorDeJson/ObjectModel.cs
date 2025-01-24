@@ -12,58 +12,41 @@ using String = System.String;
 
 namespace GeradorDeJson {
 
-  public class ObjectModel(String? nome, Tipo tipo): Model(nome, tipo) {
+  public class ObjectModel : Model {
+    private List<Model> Propriedades { get; } = new();
 
-    private List<PropertyModel> Atributos { get; } = new();
-
-    private List<ObjectModel> Objetos { get; } = new();
-
-    private List<ListModel> Listas { get; } = new();
-   
-    public void AdicionaAtributo(String nome, Object? value) {
-      Atributos.Add(new PropertyModel(nome, value, Tipo.Atributo));
+    public ObjectModel(String nome) {
+      Nome = nome;
     }
 
-    public ObjectModel AdicionaObjeto(String? nome) {
-      ObjectModel obj = new ObjectModel(nome, Tipo.Objeto);
-      Objetos.Add(obj);
+    public ObjectModel() {
+      Nome = null;
+    }
+
+    public void AdicionaAtributo(String nome, Object? value) {
+      Propriedades.Add(new PropertyModel(nome, value));
+    }
+
+    public ObjectModel AdicionaObjeto(String nome) {
+      ObjectModel obj = new ObjectModel(nome);
+      Propriedades.Add(obj);
       return obj;
     }
 
-    public ListModel AdicionaLista(String? nome, Tipo TipoElementos) {
-      ListModel list = new ListModel(nome, TipoElementos, Tipo.Lista);
-      Listas.Add(list);
+    public ListModel AdicionaLista(String nome) {
+      ListModel list = new ListModel(nome);
+      Propriedades.Add(list);
       return list;
     }
 
-    public String EscreveObjeto(Boolean escreverNome = true) {
+    public override String AsString(Boolean escreverNome = true) {
       String textoJson = escreverNome ? $"\"{Nome}\": {{" : $"{{";
-     
-      foreach (PropertyModel atributo in Atributos) {
-        textoJson += atributo.EscreveAtributo();
-        if (Atributos.Last() != atributo) {
-         textoJson += InsereVirgula(true, false);
+      foreach (Model atributo in Propriedades) {
+        textoJson += atributo.AsString();
+        if (Propriedades.Last() != atributo) {
+          textoJson += ", ";
         }
       }
-      if (Objetos.Count > 0) {
-        textoJson += InsereVirgula(true, false);
-      }
-      foreach (ObjectModel objeto in Objetos) {
-        textoJson += objeto.EscreveObjeto();
-        if (Objetos.Last() != objeto) {
-          textoJson += InsereVirgula(true, false);
-        }
-      }
-      if (Listas.Count > 0) {
-        textoJson += InsereVirgula(true, false);
-      }
-      foreach (ListModel lista in Listas) {
-        textoJson += lista.EscreveLista();
-        if (Listas.Last() != lista) {
-          textoJson += InsereVirgula(true, false);
-        }
-      }
-      
       textoJson += "}";
       return textoJson;
     }

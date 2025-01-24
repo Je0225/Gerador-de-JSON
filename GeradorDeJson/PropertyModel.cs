@@ -9,18 +9,21 @@ using Object = System.Object;
 using String = System.String;
 
 namespace GeradorDeJson {
-  public class PropertyModel(String? nome, Object? value, Tipo tipo): Model(nome, tipo) {
+  public class PropertyModel : Model {
 
-    private String? Nome { get; } = nome;
+    private Object? Value { get; }
 
-    private Object? Value { get;} = value;
+    public PropertyModel(String nome, Object? value) {
+      Nome = nome;
+      Value = value;
+    }
 
-    private new Tipo Tipo { get; set; }
+    public PropertyModel(Object value) {
+      Nome = null;
+      Value = value;
+    }
 
-    public String EscreveAtributo(Boolean escreverNome = true) {
-      if (Tipo != Tipo.Atributo) {
-        return "";
-      }
+    public override String AsString(Boolean escreverNome = true) {
       Object? valor = Value;
       switch (valor?.GetType().Name) {
         case null:
@@ -44,10 +47,7 @@ namespace GeradorDeJson {
           valor = valor.ToString()?.ToLower();
           break;
       }
-      if (escreverNome) {
-        return $"\"{Nome}\":{valor}";
-      }
-      return valor.ToString();
+      return escreverNome ? $"\"{Nome}\":{valor}" : valor?.ToString()!;
     }
   }
 }

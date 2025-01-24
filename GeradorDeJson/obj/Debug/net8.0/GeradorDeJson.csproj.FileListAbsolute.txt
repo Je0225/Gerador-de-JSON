@@ -41,3 +41,4 @@ C:\Users\User\Documents\Sources\CSharp\GeradorJson\GeradorDeJson\obj\Debug\net8.
 C:\Users\User\Documents\Sources\CSharp\GeradorJson\GeradorDeJson\obj\Debug\net8.0\GeradorDeJson.pdb
 C:\Users\User\Documents\Sources\CSharp\GeradorJson\GeradorDeJson\obj\Debug\net8.0\GeradorDeJson.genruntimeconfig.cache
 C:\Users\User\Documents\Sources\CSharp\GeradorJson\GeradorDeJson\obj\Debug\net8.0\ref\GeradorDeJson.dll
+C:\Users\User\Documents\Sources\CSharp\GeradorJson\GeradorDeJson\obj\Debug\net8.0\GeradorDeJson.sourcelink.json
