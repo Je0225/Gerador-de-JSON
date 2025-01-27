@@ -8,30 +8,30 @@ namespace GeradorDeJson {
 
     private String TextoJson { get; set; } = "";
 
-    private List<Model> Objetos { get; } = new();
+    private List<Model> Elementos { get; } = new();
 
-    public ObjectModel AddObject(String nome) {
+    public ObjectModel AddObjeto(String nome) {
       ObjectModel obj = new ObjectModel(nome);
-      Objetos.Add(obj);
+      Elementos.Add(obj);
       return obj;
     }
 
     public void AddAtributo(String nome, Object? value) {
-      Objetos.Add(new PropertyModel(nome, value));
+      Elementos.Add(new PropertyModel(nome, value));
     }
 
     public ListModel AddLista(String nome) {
       ListModel list = new ListModel(nome);
-      Objetos.Add(list);
+      Elementos.Add(list);
       return list;
     }
 
-    public override String AsString(Boolean escreverNome = true) {
+    public override String AsString() {
       TextoJson = "{\n";
-      foreach (Model objeto in Objetos) {
-        TextoJson += objeto.AsString();
-        if (Objetos.Last() != objeto) {
-          TextoJson += "\n";
+      foreach (Model elemento in Elementos) {
+        TextoJson += elemento.AsString();
+        if (Elementos.Last() != elemento) {
+          TextoJson += ",\n";
         }
       }
       TextoJson += "\n}";

@@ -8,9 +8,9 @@ namespace GeradorDeJson {
 
   public abstract class Model {
 
-    protected String? Nome { get; set; }
+    protected String? Nome { get; init; }
 
-    public abstract String AsString(Boolean escreverNome = true);
+    public abstract String AsString();
 
   }
 }

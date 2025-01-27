@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -12,44 +13,21 @@ using String = System.String;
 
 namespace GeradorDeJson {
 
-  public class ObjectModel : Model {
-    private List<Model> Propriedades { get; } = new();
+  public class ObjectModel : CompositModel {
 
-    public ObjectModel(String nome) {
+    protected override String StringAbertura => "{";
+
+    protected override String StringFechamento => "}";
+
+    public ObjectModel(String? nome) {
       Nome = nome;
+      Elementos = new List<Model>();
     }
 
-    public ObjectModel() {
-      Nome = null;
+    public void AddAtributo(String nome, Object? value) {
+      Elementos.Add(new PropertyModel(nome, value));
     }
 
-    public void AdicionaAtributo(String nome, Object? value) {
-      Propriedades.Add(new PropertyModel(nome, value));
-    }
-
-    public ObjectModel AdicionaObjeto(String nome) {
-      ObjectModel obj = new ObjectModel(nome);
-      Propriedades.Add(obj);
-      return obj;
-    }
-
-    public ListModel AdicionaLista(String nome) {
-      ListModel list = new ListModel(nome);
-      Propriedades.Add(list);
-      return list;
-    }
-
-    public override String AsString(Boolean escreverNome = true) {
-      String textoJson = escreverNome ? $"\"{Nome}\": {{" : $"{{";
-      foreach (Model atributo in Propriedades) {
-        textoJson += atributo.AsString();
-        if (Propriedades.Last() != atributo) {
-          textoJson += ", ";
-        }
-      }
-      textoJson += "}";
-      return textoJson;
-    }
 
   }
 

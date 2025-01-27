@@ -6,36 +6,22 @@ using System.Threading.Tasks;
 
 namespace GeradorDeJson {
 
-  public class ListModel : Model {
+  public class ListModel : CompositModel {
 
-    private List<Model> Lista { get; set; } = new();
+    protected override String StringAbertura => "[";
+
+    protected override String StringFechamento => "]";
 
     public ListModel(String? nome) {
       Nome = nome;
+      Elementos = new List<Model>();
     }
 
     public void Add(Object elemento) {
       PropertyModel property = new PropertyModel(elemento);
-      Lista.Add(property);
+      Elementos.Add(property);
     }
 
-    public void Add(Model elemento) {
-      Lista.Add(elemento);
-    }
-
-    public override String AsString(Boolean escreverNome = true) {
-      String textoJson = escreverNome ? $"\"{Nome}\": [" : $"[";
-      foreach (Model elemento in Lista) {
-        textoJson += elemento.AsString(false);
-        if (Lista.Last() != elemento) {
-          textoJson += ", ";
-        }
-      }
-      textoJson += "]";
-      return textoJson;
-    }
-
-    // unir o ObjectModel e o ListModel
   }
 
 }

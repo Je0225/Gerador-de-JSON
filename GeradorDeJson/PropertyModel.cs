@@ -1,30 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using Boolean = System.Boolean;
+﻿using Boolean = System.Boolean;
 using Object = System.Object;
 using String = System.String;
 
 namespace GeradorDeJson {
   public class PropertyModel : Model {
 
-    private Object? Value { get; }
+    private Object? Valor { get; }
 
-    public PropertyModel(String nome, Object? value) {
+    public PropertyModel(String nome, Object? valor) {
       Nome = nome;
-      Value = value;
+      Valor = valor;
     }
 
-    public PropertyModel(Object value) {
+    public PropertyModel(Object valor) {
       Nome = null;
-      Value = value;
+      Valor = valor;
     }
 
-    public override String AsString(Boolean escreverNome = true) {
-      Object? valor = Value;
+    public override String AsString() {
+      Object? valor = Valor;
       switch (valor?.GetType().Name) {
         case null:
           valor = "null";
@@ -47,7 +41,7 @@ namespace GeradorDeJson {
           valor = valor.ToString()?.ToLower();
           break;
       }
-      return escreverNome ? $"\"{Nome}\":{valor}" : valor?.ToString()!;
+      return String.IsNullOrEmpty(Nome) ? valor?.ToString()! : $"\"{Nome}\":{valor}";
     }
   }
 }
