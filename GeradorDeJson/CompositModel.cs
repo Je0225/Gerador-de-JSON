@@ -26,11 +26,11 @@ namespace GeradorDeJson {
     }
 
     public override String AsString() {
-      String textoJson = String.IsNullOrEmpty(Nome)? $"{StringAbertura}" : $"\"{Nome}\": {StringAbertura}";
+      String textoJson = String.IsNullOrEmpty(Nome)? $"{StringAbertura}":$"\"{Nome}\":{StringAbertura}";
       foreach (Model elemento in Elementos) {
         textoJson += elemento.AsString();
         if (Elementos.Last() != elemento) {
-          textoJson += ", ";
+          textoJson += ",";
         }
       }
       textoJson += $"{StringFechamento}";

@@ -4,7 +4,7 @@ using GeradorDeJson;
 
 Json Json = new Json();
 
-ObjectModel periodoApuracao = Json.AddObjeto("PeriodoApuracao");
+/*ObjectModel periodoApuracao = Json.AddObjeto("PeriodoApuracao");
 periodoApuracao.AddAtributo("MesApuracao", 11);
 periodoApuracao.AddAtributo("AnoApuracao", 2024);
 
@@ -34,7 +34,7 @@ ListModel outraLista = Json.AddLista("Outralista");
 ListModel terceiralista = outraLista.AddLista(null);
 terceiralista.Add(3223);
 ObjectModel objeto = outraLista.AddObjeto(null);
-objeto.AddAtributo("umAtributo", "ValorAtrbuto");
+objeto.AddAtributo("umAtributo", "ValorAtrbuto");*/
 
 // Json Giovano;
 
@@ -50,7 +50,7 @@ numerosMegasena.Add(33);
 numerosMegasena.Add(52);
 numerosMegasena.Add(58);
 ListModel provas = Json.AddLista("provas");
-ObjectModel provaPt = provas.AddObjeto(null);
+ObjectModel provaPt = provas.AddObjeto("primeira");
 provaPt.AddAtributo("nome", "portugues");
 provaPt.AddAtributo("nota", 9.5);
 ObjectModel provaMat = provas.AddObjeto(null);
@@ -58,3 +58,4 @@ provaMat.AddAtributo("nome", "matematica");
 provaMat.AddAtributo("nota", 9);
 
 Console.WriteLine(Json.AsString());
+Console.WriteLine(Json.Validate());
