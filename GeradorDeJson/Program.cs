@@ -38,7 +38,7 @@ objeto.AddAtributo("umAtributo", "ValorAtrbuto");*/
 
 // Json Giovano;
 
-ObjectModel giovano = Json.AddObjeto("pessoa");
+ObjectModel giovano = Json.AddObjeto(null);
 giovano.AddAtributo("nome", "giovano");
 giovano.AddAtributo("foda", true);
 giovano.AddAtributo("teste", null);
@@ -49,7 +49,7 @@ numerosMegasena.Add(29);
 numerosMegasena.Add(33);
 numerosMegasena.Add(52);
 numerosMegasena.Add(58);
-ListModel provas = Json.AddLista(null);
+ListModel provas = Json.AddLista("provas");
 ObjectModel provaPt = provas.AddObjeto(null);
 provaPt.AddAtributo("nome", "portugues");
 provaPt.AddAtributo("nota", 9.5);

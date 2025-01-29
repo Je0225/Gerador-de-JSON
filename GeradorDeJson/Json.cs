@@ -39,54 +39,137 @@ namespace GeradorDeJson {
     }
 
     public String Validate() {
-      //validar listas {erro 1 e 2}
-      String json = TextoJson;
-      Int32 idxAberturaUltimaLista = json.LastIndexOf('[');
-      json = json.Substring(idxAberturaUltimaLista);
-      Int32 idxFechamentoUltimaLista = json.IndexOf(']');
-      json = json.Substring(0, idxFechamentoUltimaLista + 1);
-      Boolean ehLista = false;
+      if (String.IsNullOrEmpty(TextoJson)) {
+        return "Não há texto para validar.";
+      }
+      Boolean abriuAspas = false;
       Boolean ehObjeto = false;
+      Boolean ehLista = false;
+      Boolean ehkey = false;
+      Boolean ehValue = false;
+      Char letraAnterior = '\0';
+      Int32 nivel = 0;
       Int32 idxErro = 0;
-      String msg = "JSON is valid!";
+      String[] parents = new String[10];
+      String atual = "";
+      String msg = "JSON é válido!";
 
-      for (int i = 0; i < json.Length; i++) {
-        Char caracter = json[i];
-        if (caracter == '{') {
-          ehLista = false;
-          ehObjeto = true;
-        } else if (caracter == '[') {
-          ehLista = true;
-          ehObjeto = false;
-        } else if (caracter == '}' || caracter == ']') {
-          ehLista = false;
-          ehObjeto = false;
+      void AtualizaVariaveis(Char letra) {
+        if (letra == '"') {
+          abriuAspas = !abriuAspas;
         }
-        if (ehLista && caracter == ':') {
-          msg = "Error: Parse error on line 1:\n";
-          idxErro = TextoJson.IndexOf(json, StringComparison.Ordinal);
-          idxErro += i;
-          msg += $"...{TextoJson.Substring(idxErro - 20, 40)}\n";
-
-          for (int j = 0; j < 23; j++) {
-            msg += '-';
+        switch (letra) {
+          case '{':
+            ehObjeto = true;
+            ehLista = false;
+            ehkey = true;
+            ehValue = false;
+            if (nivel == 0) {
+              atual = "objeto";
+            }
+            nivel++;
+            parents[nivel - 1] = atual;
+            atual = "objeto";
+            break;
+          case '[':
+            ehObjeto = false;
+            ehLista = true;
+            ehkey = false;
+            ehValue = true;
+            if (nivel == 0) {
+              atual = "lista";
+            }
+            nivel++;
+            parents[nivel - 1] = atual;
+            atual = "lista";
+            break;
+          case '}':
+            ehObjeto = parents[nivel -1] == "objeto";
+            nivel--;
+            ehLista = !ehObjeto;
+            atual = ehObjeto ? "objeto": "lista";
+            ehkey = false;
+            ehValue = true;
+            break;
+          case ']':
+            ehObjeto = parents[nivel - 1] == "objeto";
+            nivel--;
+            ehLista = !ehObjeto;
+            atual = ehObjeto ? "objeto" : "lista";
+            ehkey = false;
+            ehValue = true;
+            break;
+          default: {
+            if (!ehLista && letra == ':') {
+              ehObjeto = true;
+              ehLista = false;
+              ehkey = false;
+              ehValue = true;
+            } 
+            else if (!ehLista && ehValue && letra == ',') {
+              ehObjeto = true;
+              ehLista = false;
+              ehkey = true;
+              ehValue = false;
+            }
+            break;
           }
-          msg += '^';
-          break;
-        }
-
-        if (TextoJson[idxAberturaUltimaLista - 1] != ':') {
-          msg = "Error: Parse error on line 1:\n";
-          idxErro = TextoJson.IndexOf(json, StringComparison.Ordinal) - 1;
-          msg += $"...{TextoJson.Substring(idxErro - 20, 40)}\n";
-
-          for (int j = 0; j < 23; j++) {
-            msg += '-';
-          }
-          msg += '^';
-          break;
         }
       }
+
+      for (int i = 0; i < TextoJson.Length; i++) {
+         Char letra = TextoJson[i];
+         AtualizaVariaveis(letra);
+         if (i == 0 && letra != '{' && letra != '[') {
+           msg = "O JSON não foi aberto corretamente. Esperado: '{' ou '['.";
+           idxErro = i;
+           break;
+         }
+         if (ehObjeto) {
+           if (letra == '{' && letraAnterior == '{') {
+             msg = "Nome de objeto não encontrado.";
+             idxErro = i;
+             break;
+           }
+           if (letra == ',' && TextoJson[i + 1] == '{') {
+             msg = "Nome de objeto não encontrado.";
+             idxErro = i;
+             break;
+           }
+           if (letra == ',' && TextoJson[i + 1] == '[') {
+             msg = "Nome de objeto não encontrado.";
+             idxErro = i;
+             break;
+           }
+         }
+         if (ehLista) {
+           if (letra == ':' && letraAnterior == '"') {
+             msg = "Listas só podem ter elementos não nonimados. Esperado: ,";
+             idxErro = i;
+             break;
+           }
+         }
+         letraAnterior = letra;
+      }
+      if (msg == "JSON é válido!") {
+        return msg;
+      }
+      if (idxErro < 20) {
+        TextoJson = TextoJson.Substring(0, 40);
+        msg += $"\n...{TextoJson}\n";
+        for (int i = 0; i < idxErro + 3; i++) {
+          msg += "-";
+        }
+        msg += "^";
+        return msg;
+      }
+      TextoJson = TextoJson.Substring(idxErro - 20, 40);
+      
+      msg += $"\n...{TextoJson}\n";
+      for(int i = 0; i < 23; i++){
+        msg += "-";
+      }
+      msg += "^";
       return msg;
     }
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GeradorDeJson")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+972c979317a30222c146e80fab52f8fd7967ac68")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89801c772dd0427f5827aef7f806223107456213")]
 [assembly: System.Reflection.AssemblyProductAttribute("GeradorDeJson")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GeradorDeJson")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
