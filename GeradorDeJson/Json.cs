@@ -39,8 +39,7 @@ namespace GeradorDeJson {
     }
 
     public String Validate() {
-      //validar listas
-
+      //validar listas {erro 1 e 2}
       String json = TextoJson;
       Int32 idxAberturaUltimaLista = json.LastIndexOf('[');
       json = json.Substring(idxAberturaUltimaLista);
@@ -69,8 +68,19 @@ namespace GeradorDeJson {
           idxErro += i;
           msg += $"...{TextoJson.Substring(idxErro - 20, 40)}\n";
 
-          idxErro = i;
-          for (int j = 0; j < idxErro; j++) {
+          for (int j = 0; j < 23; j++) {
+            msg += '-';
+          }
+          msg += '^';
+          break;
+        }
+
+        if (TextoJson[idxAberturaUltimaLista - 1] != ':') {
+          msg = "Error: Parse error on line 1:\n";
+          idxErro = TextoJson.IndexOf(json, StringComparison.Ordinal) - 1;
+          msg += $"...{TextoJson.Substring(idxErro - 20, 40)}\n";
+
+          for (int j = 0; j < 23; j++) {
             msg += '-';
           }
           msg += '^';
