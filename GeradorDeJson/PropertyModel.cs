@@ -16,7 +16,6 @@ namespace GeradorDeJson {
       Nome = null;
       Valor = valor;
     }
-
     public override String AsString() {
       Object? valor = Valor;
       switch (valor?.GetType().Name) {

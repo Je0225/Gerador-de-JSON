@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|solutionrelative:geradordejson\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|c:\\users\\user\\documents\\sources\\csharp\\geradorjson\\geradordejson\\validatejson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|solutionrelative:geradordejson\\validatejson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|c:\\users\\user\\documents\\sources\\csharp\\geradorjson\\geradordejson\\objectmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|solutionrelative:geradordejson\\objectmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|c:\\users\\user\\documents\\sources\\csharp\\geradorjson\\geradordejson\\listmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|solutionrelative:geradordejson\\listmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,16 +23,16 @@
       "RelativeMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|solutionrelative:geradordejson\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|c:\\users\\user\\documents\\sources\\csharp\\geradorjson\\geradordejson\\objectmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|solutionrelative:geradordejson\\objectmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|c:\\users\\user\\documents\\sources\\csharp\\geradorjson\\geradordejson\\propertymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|solutionrelative:geradordejson\\propertymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|c:\\users\\user\\documents\\sources\\csharp\\geradorjson\\geradordejson\\json.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|solutionrelative:geradordejson\\json.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|c:\\users\\user\\documents\\sources\\csharp\\geradorjson\\geradordejson\\compositmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|solutionrelative:geradordejson\\compositmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|c:\\users\\user\\documents\\sources\\csharp\\geradorjson\\geradordejson\\propertymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A41CEA8-C3ED-47F4-9A16-1E5DA413D4C2}|GeradorDeJson\\GeradorDeJson.csproj|solutionrelative:geradordejson\\propertymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
@@ -44,21 +52,20 @@
               "RelativeDocumentMoniker": "GeradorDeJson\\PropertyModel.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorJson\\GeradorDeJson\\PropertyModel.cs",
               "RelativeToolTip": "GeradorDeJson\\PropertyModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA5wA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-27T18:05:45.141Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "ObjectModel.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorJson\\GeradorDeJson\\ObjectModel.cs",
               "RelativeDocumentMoniker": "GeradorDeJson\\ObjectModel.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorJson\\GeradorDeJson\\ObjectModel.cs",
               "RelativeToolTip": "GeradorDeJson\\ObjectModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-27T13:45:21.339Z",
               "IsPinned": true,
@@ -74,20 +81,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "ValidateJson.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorJson\\GeradorDeJson\\ValidateJson.cs",
+              "RelativeDocumentMoniker": "GeradorDeJson\\ValidateJson.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorJson\\GeradorDeJson\\ValidateJson.cs",
+              "RelativeToolTip": "GeradorDeJson\\ValidateJson.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAwwFoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T11:09:16.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Json.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorJson\\GeradorDeJson\\Json.cs",
+              "RelativeDocumentMoniker": "GeradorDeJson\\Json.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorJson\\GeradorDeJson\\Json.cs",
+              "RelativeToolTip": "GeradorDeJson\\Json.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAA6wCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T11:07:48.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "CompositModel.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorJson\\GeradorDeJson\\CompositModel.cs",
               "RelativeDocumentMoniker": "GeradorDeJson\\CompositModel.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorJson\\GeradorDeJson\\CompositModel.cs",
               "RelativeToolTip": "GeradorDeJson\\CompositModel.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCQAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBYAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T11:52:29.307Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-27T11:52:29.307Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Model.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorJson\\GeradorDeJson\\Model.cs",
               "RelativeDocumentMoniker": "GeradorDeJson\\Model.cs",
@@ -95,21 +126,19 @@
               "RelativeToolTip": "GeradorDeJson\\Model.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T19:38:35.887Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-30T19:38:35.887Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ListModel.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorJson\\GeradorDeJson\\ListModel.cs",
               "RelativeDocumentMoniker": "GeradorDeJson\\ListModel.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorJson\\GeradorDeJson\\ListModel.cs",
               "RelativeToolTip": "GeradorDeJson\\ListModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T17:35:13.681Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-27T17:35:13.681Z"
             },
             {
               "$type": "Document",
@@ -119,7 +148,7 @@
               "RelativeDocumentMoniker": "GeradorDeJson\\Program.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\Sources\\CSharp\\GeradorJson\\GeradorDeJson\\Program.cs",
               "RelativeToolTip": "GeradorDeJson\\Program.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAADMAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAcwC0AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-26T20:22:42.637Z",
               "EditorCaption": ""
