@@ -1,5 +1,4 @@
-﻿using Boolean = System.Boolean;
-using Object = System.Object;
+﻿using Object = System.Object;
 using String = System.String;
 
 namespace GeradorDeJson {
@@ -16,6 +15,7 @@ namespace GeradorDeJson {
       Nome = null;
       Valor = valor;
     }
+
     public override String AsString() {
       Object? valor = Valor;
       switch (valor?.GetType().Name) {

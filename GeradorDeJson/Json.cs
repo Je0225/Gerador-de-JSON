@@ -1,6 +1,4 @@
-﻿
-using Boolean = System.Boolean;
-using Object = System.Object;
+﻿using Object = System.Object;
 using String = System.String;
 
 namespace GeradorDeJson {

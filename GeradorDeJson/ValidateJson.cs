@@ -3,19 +3,17 @@
 
     private Boolean ehObjeto = false;
     private Boolean ehLista = false;
-    private Boolean ehkey = false;
     private Boolean ehValue = false;
     private Int32 nivel = 0;
     private Int32 idxErro = 0;
     private String[] parents;
     private String atual = "";
-    private String lista = "lista";
-    private String objeto = "objeto";
+    private readonly String lista = "lista";
+    private readonly String objeto = "objeto";
 
     private void SetaValores(Boolean ehObjetoValue, Boolean ehListaValue, Boolean ehKeyValue, Boolean ehValueVal) {
       ehObjeto = ehObjetoValue;
       ehLista = ehListaValue;
-      ehkey = ehKeyValue;
       ehValue = ehValueVal;
     }
 
@@ -45,7 +43,6 @@
             nivel--;
             ehLista = !ehObjeto;
             atual = ehObjeto ? objeto : lista;
-            ehkey = false;
             ehValue = true;
           }
           if (!ehLista && letra == ':') {
